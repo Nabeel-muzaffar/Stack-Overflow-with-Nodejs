@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/signup.css">
+    <title>{{pageTitle}}</title>
+</head>
+
+<body>
+    <nav>
+        {{!-- <div class="logo">THE GURU</div> --}}
+        <div class="navigation">
+            <a href="/">Home</a>
+            {{#if isAuthen}}
+            <a href="/discuss">Discuss</a>
+            {{/if}}
+            <a href="/questions">Questions</a>
+            <a href="">About</a>
+        </div>
+        <div class="btn-1">
+            <a href="/login"><button>Login</button></a>
+            <a href="/signup"><button>Signup</button></a>
+            {{#if isAuthen}}
+            <form action="/logout" method="post"></form>
+            <input type="submit" value="Logout">
+            {{/if}}
+        </div>
+    </nav>
+
+
+
+    <div class="login-page">
+        <div class="form">
+
+            <form action="/signup" method="post" enctype="multipart/form-data">
+
+                <p>Profice picture</p>
+                <input type="file" name="image" id="image" >
+
+                <input type="email" placeholder="Email" name="email" />
+                <input type="password" placeholder="password" name="password" />
+                <button type="submit">Signup</button>
+                <p class="message">registered? <a href="/login">login</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/question.css">
+
+    <title>{{pageTitle}}</title>
+</head>
+
+<body>
+    <nav>
+        {{!-- <div class="logo">THE GURU</div> --}}
+        <div class="navigation">
+            <a href="/">Home</a>
+            {{#if isAuthen}}
+            <a href="/discuss">Discuss</a>
+            {{/if}}
+            <a href="/questions">Questions</a>
+            <a href="">About</a>
+        </div>
+        <div id="sub-nav">
+            {{#if isAuthen}}
+            <div id="sub-nav2">
+                <img src="/{{data.image}}" alt="logo" id="logo">
+                <p style="color: white;">{{data.email}}</p>
+            </div>
+            {{/if}}
+            <div class="btn-1">
+                {{#if isAuthen}}
+                <form action="/logout" method="post">
+                    <button type="submit">Logout</button>
+                </form>
+                {{else}}
+
+                <a href="/login"><button>Login</button></a>
+                <a href="/signup"><button>Signup</button></a>
+                {{/if}}
+            </div>
+        </div>
+    </nav>
+    <div class="questions-section">
+        <h4>Question</h4>
+        <p class="question">{{ques.question}}</p>
+
+    </div>
+    <div class="postAnswer">
+        <form action="/loadQuestion/{{ques._id}}" method="post">
+            <textarea style="font-size: 12pt; padding:10px;" id="ques" name="answer" rows="8" cols="50"
+                placeholder="Enter Your Answer"></textarea>
+            <br><input id="python-btn" type="submit" value="Post">
+        </form>
+    </div>
+
+{{#if isLength}}
+    <div class="answer-section">
+        {{#each ans}}
+        <article>
+        <h4>Answers</h4>
+        <p class="question">{{this.answer}}</p>
+        </article>
+        {{/each}}
+        {{else}}
+        <h1>No Answer Yet</h1>
+        {{/if}}
+    </div>
+</body>
+
+</html>

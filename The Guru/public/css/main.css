@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+*{
+    padding: 0%;
+    margin: 0px;
+}
+body{
+    font-family: 'Open Sans' , sans-serif;
+    /* background-color: #2c3e50; */
+}
+
+.logo{
+    font-size: 25px;
+    padding: 10px;
+    /* border: 1px solid black; */
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 35px;
+    /* margin-top: 10px;
+    margin-left: 10px; */
+    background-color: #9ED2C6;
+    color: black
+}
+
+nav {
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    /* max-width: 670px; */
+    background-color: black
+}
+
+.navigation{
+    /* border: 1px solid black; */
+    /* padding: 10px; */
+    font-size: 25px;
+    
+
+    /* text-decoration: none;
+    list-style: none; */
+}
+.navigation a{
+    list-style: none;
+    text-decoration: none;
+    padding: 10px 15px;
+    color: white;
+    /* border: 1px solid rgba(0, 0, 0, 0.747); */
+    transition: all 0.5 ease-in;
+}
+.navigation a:hover{
+    background-color: #9ddbcd;
+    color: black;
+    border-radius: 10%;
+    /* border: 1px solid white; */
+}
+
+#sub-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 40%; */
+}
+#sub-nav p{
+    margin-inline: 5px;
+}
+#sub-nav2{
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+#sub-nav2 img{
+    margin: 0px 30px;
+}
+
+.btn-1{
+    background-color: #9ED2C6;
+    /* border: 1px solid black; */
+    /* width: 15%; */
+    padding: 10px;
+    /* border-top-left-radius: 20px; */
+    /* border-top-left-radius: 32px; */
+    /* border-bottom-right-radius: 35px; */
+
+}
+.btn-1 button{
+    padding: 10px 30px;
+    border: none;
+    border-radius: 7px;
+    text-transform: uppercase;
+    background-color: #2f31318a;
+    transition: color 0.25s;
+    cursor: pointer;
+    color: white;
+    
+}
+.btn-1 a{
+    margin-inline: 5px;
+
+
+}
+
+.btn-1 a button:hover{
+    /* text-decoration: underline; */
+    background-color: #9ddbcd;
+    color: black;
+      
+    
+}
+#logo{
+    width: 50px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.section2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.section2 h3{
+    font-size: 5rem;
+    color: white;
+    /* background-color: #9ddbcd; */
+    /* padding: 10px 100px; */
+    /* border-radius: 10px; */
+
+}
+.section2 .sub-section2 button a{
+text-decoration: none;
+font-size: 2rem;
+color: black;
+
+}
+
+.section2 .sub-section2 button{
+    background-color: #9ddbcd;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 50px;
+}
+.section2 img{
+  width: 350px;  
+}
+h2{
+    text-align: center;
+    margin-top: 20px;
+}

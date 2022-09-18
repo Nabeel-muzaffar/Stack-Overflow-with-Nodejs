@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/discuss.css">
+    <title>{{pageTitle}}</title>
+</head>
+
+<body>
+    <nav>
+        {{!-- <div class="logo">THE GURU</div> --}}
+        <div class="navigation">
+            <a href="/">Home</a>
+            {{#if isAuthen}}
+            <a href="/discuss">Discuss</a>
+            {{/if}}
+            <a href="/questions">Questions</a>
+            <a href="">About</a>
+        </div>
+       <div id="sub-nav">
+            {{#if isAuthen}}
+            <div id="sub-nav2">
+                <img src="/{{data.image}}" alt="logo" id="logo">
+                <p style="color: white;">{{data.email}}</p>
+            </div>
+            {{/if}}
+            <div class="btn-1">
+                {{#if isAuthen}}
+                <form action="/logout" method="post">
+                    <button type="submit">Logout</button>
+                </form>
+                {{else}}
+
+                <a href="/login"><button>Login</button></a>
+                <a href="/signup"><button>Signup</button></a>
+                {{/if}}
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="discuss-main-heading">Discuss in Category</h1>
+    <hr style="width: 15%; margin:15px auto">
+    <div class="category">
+        <div class="box"><img src="/pic/Python-Symbol-removebg-preview.png" alt="picture"><a
+                href="/category?Lname=Python"><button>Python</button></a>
+        </div>
+        <div class="box"><img style="height: 170px;
+    width: 40%;" src="/pic/png-clipart-javascript-open-logo-number-js-angle-text-thumbnail-removebg-preview.png"
+                alt="picture"><a href="/category?Lname=javascript"><button>Javascript</button></a></div>
+        <div class="box"><img style="width: 50%;height: 180px;"
+                src="/pic/png-clipart-c-logo-the-c-programming-language-computer-icons-computer-programming-source-code-programming-miscellaneous-template-removebg-preview.png"
+                alt="picture"><a href="/category?Lname=C"><button>C++</button></a></div>
+    </div>
+</body>
+
+</html>

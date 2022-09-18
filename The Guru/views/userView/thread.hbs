@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/python.css">
+    <title>{{pageTitle}}</title>
+</head>
+
+<body>
+    <nav>
+        {{!-- <div class="logo">THE GURU</div> --}}
+        <div class="navigation">
+            <a href="/">Home</a>
+            {{#if isAuthen}}
+            <a href="/discuss">Discuss</a>
+            {{/if}}
+            <a href="/questions">Questions</a>
+            <a href="">About</a>
+        </div>
+        <div id="sub-nav">
+            {{#if isAuthen}}
+            <div id="sub-nav2">
+                <img src="/{{data.image}}" alt="logo" id="logo">
+                <p style="color: white;">{{data.email}}</p>
+            </div>
+            {{/if}}
+            <div class="btn-1">
+                {{#if isAuthen}}
+                <form action="/logout" method="post">
+                    <button type="submit">Logout</button>
+                </form>
+                {{else}}
+
+                <a href="/login"><button>Login</button></a>
+                <a href="/signup"><button>Signup</button></a>
+                {{/if}}
+            </div>
+        </div>
+    </nav>
+    <div class="python-main-heading">
+        <h1>{{mainheading}}</h1>
+        <img src="/pic/{{mainheading}}.png" alt="No picture">
+        <h2>Chill Bro Scroll Down to Post Question</h2>
+    </div>
+    <hr style="width: 40%;margin:20px auto;">
+    <div class="python-postq">
+        <h3>Post Question</h3>
+        <form action="/category?Lname={{mainheading}}" method="post">
+            <textarea style="font-size: 12pt; padding:10px;" id="ques" name="question" rows="10" cols="100"
+                placeholder="Enter Your Question"></textarea>
+            <br><input id="python-btn" type="submit" value="Post">
+        </form>
+
+
+    </div>
+    {{#if isLength}}
+    <div class="python-display-question">
+        {{#each ques}}
+        <article>
+            <div class="py-dev">
+            <h3>Question </h3>
+            <p>Posted by: {{this.user}}</p>
+            </div>
+            <a href="/loadQuestion/{{this._id}}">
+                <p>{{this.question}}</p>
+            </a>
+        </article>
+        {{/each}}
+        {{else}}
+        <h1>No Question Yet</h1>
+        {{/if}}
+    </div>
+</body>
+
+</html>

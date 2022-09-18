@@ -1,0 +1,91 @@
+.python-main-heading{
+    text-align: center;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+.python-main-heading h2{
+    margin: 0px;
+}
+.python-postq{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: center;
+}
+.python-postq h3{
+    font-size: 3rem;
+    margin: 15px;
+}
+textarea::placeholder{
+    font-size: 2rem;
+    /* text-align: c; */
+}
+#python-btn{
+    padding: 10px 20px;
+    width: 15%;
+    margin: 10px auto;
+    background-color: #9ED2C6;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+}
+
+#python-btn:hover{
+    background-color: #79bbac;
+}
+.python-display-question{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.python-display-question article{
+    text-align: center;
+    /* background-color: #9ED2C6; */
+    border: 1px solid #79bbac;
+    margin: 30px 0px;
+    width: 50%;
+}
+.python-display-question article div h3{
+    color: black;
+    background-color: #79bbac;
+    /* border-radius: 20px; */
+    font-size: 30px;
+    /* width: 40%; */
+    
+}
+.python-display-question article div p{
+  width: 60%;
+}
+.python-display-question article a{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+}
+.python-display-question article a p{
+    background-color: white;
+    width: 50%;
+    margin-inline: auto;
+    padding: 30px;
+
+}
+
+.python-display-question article a p:hover{
+    /* width: 40%; */
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.py-dev{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #79bbac;
+}
